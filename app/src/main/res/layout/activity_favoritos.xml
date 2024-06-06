@@ -10,7 +10,7 @@
         android:id="@+id/tvFavoritos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Favoritos"
+        android:text="Predefinições"
         android:textColor="@color/black"
         android:textSize="32dp"
         android:textStyle="bold"
@@ -52,17 +52,55 @@
 
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/tvMusic2"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clPref"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="A Certain Romance"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
             app:layout_constraintStart_toEndOf="@id/cvMusicCard2"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvPref"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Predefinição 1"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/clPref"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivCircle"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/circle"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvPref"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/tvMusic2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="A Certain Romance"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintStart_toEndOf="@id/ivCircle"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
         <TextView
             android:id="@+id/tvType2"
